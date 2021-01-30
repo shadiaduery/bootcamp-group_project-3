@@ -2,7 +2,7 @@
 
 ## BEST CAMPING IN OREGON 
 
-Group Team Members: Anna Rischitelli, Priya Anulacharam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery
+Group Team Members: Anna Rischitelli, Priya Arunachalam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery
 
 ### Question: What is the best campground based on your available vacation time of year in Oregon? 
 
