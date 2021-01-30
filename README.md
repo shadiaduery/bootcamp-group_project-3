@@ -30,7 +30,7 @@ Group Team Members: Anna Rischitelli, Priya Anulacharam, Nataliia Sokolova, Vinc
 
 5) You will have an ample time in class to work with your group, but expect to put in hours outside of class as well
 
-Requirements:
+### Requirements:
 
 1) Your visualizations must include a Python Flask-powered API, HTML/CSS, JavaScript and at least on database (SQL, MongoDB, SQLite)
 
