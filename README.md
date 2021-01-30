@@ -4,19 +4,11 @@
 
 Group Team Members: Anna Rischitelli, Priya Arunachalam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery
 
-### Question: What is the best campground based on your available vacation time of year in Oregon? 
+### Question:
+Does an increase bicycling does it impact transportation emissions in Seattle and Portland? Is there a difference between the two cities?
 
 ### Goals: 
-1) We are providing different camping options and merging it with this information:
-    - Camoground lat and long
-    - Campground
-    - avg. high
-    - avg. low
-    - avg. precipitation
-    - map layer with closest grocery store
-    - map layer with closest gas station
-    - map layer with cloeset hospital (bonus?)
-2) Web scaping for news about camping or weather
+Determine if an increase or decrease in cycling (or other outdoor activity types) affect transporation emission in Seattle and Portland.
 
 
 
