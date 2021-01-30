@@ -1,6 +1,6 @@
 # bootcamp-group_project-3
 
-## BEST CAMPING IN OREGON 
+## Commuting vs. Transportation Emissions
 
 Group Team Members: Anna Rischitelli, Priya Arunachalam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery
 
