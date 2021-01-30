@@ -8,6 +8,8 @@ Group Team Members: Anna Rischitelli, Priya Anulacharam, Nataliia Sokolova, Vinc
 
 ### Goals: 
 1) We are providing different camping options and merging it with this information:
+    - Camoground lat and long
+    - Campground
     - avg. high
     - avg. low
     - avg. precipitation
