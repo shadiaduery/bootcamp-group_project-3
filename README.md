@@ -2,6 +2,18 @@
 
 Group Team Members: Anna Rischitelli, Priya Anulacharam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery
 
+Question: What is the best campground based on your available vacation time of year in Oregon? 
+
+Goals: 
+1) We are providing different camping options and merging it with this information:
+    - avg. high
+    - avg. low
+    - avg. precipitation
+    - map layer with closest grocery store
+    - map layer with closest gas station
+    - map layer with cloeset hospital (bonus?)
+2) Web scaping for news about camping or weather
+
 Project Description:
 
 1) Your task is to answer a business question by telling a story with data visualizations
