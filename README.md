@@ -5,7 +5,7 @@
 Group Team Members: Anna Rischitelli, Priya Arunachalam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery
 
 ### Question:
-Does the population density of a city affect transportation emissions? 
+Does the population density of a city affect transportation emissions (in top 50 cities in the US by population)? 
 
 Hypothesis: A city with high population density would have a decrease in transportation emissions. 
 
