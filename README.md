@@ -41,3 +41,14 @@ Determine if an increase or decrease in cycling (or other outdoor activity types
 5) Your project must include some level of user-driven interactions (e.g. menus, dropdowns, textboxes)
 
 6) Your final visualization should include at least three views.
+
+
+
+## Readme should include:
+ This is the README that describes how to run
+
+This is the database that is used
+
+This is how to run the included code to insert data into the DB
+
+This is how to run the code to spin up the web app and view the visualizations
