@@ -1,8 +1,18 @@
 # bootcamp-group_project-3
 
-Group Team Members: Anna Rischitelli, Priya Anulacharam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery
+## Commuting vs. Transportation Emissions
 
-Project Description:
+Group Team Members: Anna Rischitelli, Priya Arunachalam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery
+
+### Question:
+Does an increase bicycling does it impact transportation emissions in Seattle and Portland? Is there a difference between the two cities?
+
+### Goals: 
+Determine if an increase or decrease in cycling (or other outdoor activity types) affect transporation emission in Seattle and Portland.
+
+
+
+### Project Description:
 
 1) Your task is to answer a business question by telling a story with data visualizations
 
@@ -14,7 +24,7 @@ Project Description:
 
 5) You will have an ample time in class to work with your group, but expect to put in hours outside of class as well
 
-Requirements:
+### Requirements:
 
 1) Your visualizations must include a Python Flask-powered API, HTML/CSS, JavaScript and at least on database (SQL, MongoDB, SQLite)
 
