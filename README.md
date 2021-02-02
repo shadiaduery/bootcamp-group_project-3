@@ -19,13 +19,17 @@ Add ons:
 - City planning initiatives
 - Centralized public transportation
 - Forecast emissions based on population growth
+- Does a city's boundary grow and does that affect emissions
 
 ## Visualization
-1. Heat map / bubble map - map our cities and create a bubble based on a normalized population with map layer for emissions
+1. Heat map / bubble map - map our cities and create a bubble based on a normalized population with three map layers 
+    3a. Emissions 
+    3b. Population
+    3c. Emissions by pop.density
 
-2. Scatter plot - pop.density vs. emissions
+2. Scatter plot - pop.density vs. emissions with regression line (Priya)
 
-3. 
+3. Line chart - emissions vs. population over time (Shadia)
 
 ## Data Sources
 - Population (Vincent's data)
@@ -72,3 +76,12 @@ This is the database that is used
 This is how to run the included code to insert data into the DB
 
 This is how to run the code to spin up the web app and view the visualizations
+
+
+# Steps
+- Vincent + Nataliia import data from CSV
+- Vincent + Nataliia clean and organize data in jupyter notebook/pandas, merge into single clean dataframe
+- Create all three visualizations (and more!) in pandas to make sure they fit what we need BEFORE we go through to d3
+- Create empty database SQlite in pandas
+- Pass this data into SQLite database, follow the same steps as pizza example to create table and pass data through flask app
+- Open app.py
