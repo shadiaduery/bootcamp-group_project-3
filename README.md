@@ -44,7 +44,7 @@ Determine if an increase or decrease in cycling (or other outdoor activity types
 
 
 
-## Readme should include:
+## Final Readme should include:
  This is the README that describes how to run
 
 This is the database that is used
