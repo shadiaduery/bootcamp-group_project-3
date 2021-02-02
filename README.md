@@ -5,12 +5,32 @@
 Group Team Members: Anna Rischitelli, Priya Arunachalam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery
 
 ### Question:
-Does an increase bicycling does it impact transportation emissions in Seattle and Portland? Is there a difference between the two cities?
+Does the population density of a city affect transportation emissions? 
 
-### Goals: 
-Determine if an increase or decrease in cycling (or other outdoor activity types) affect transporation emission in Seattle and Portland.
+Hypothesis: A city with high population density would have a decrease in transportation emissions. 
 
+Primary goals:
+- Overall emissions of a city
+- Population density of each city
+- 
 
+Add ons:
+- Commute numbers
+- City planning initiatives
+- Centralized public transportation
+- Forecast emissions based on population growth
+
+## Visualization
+1. Heat map / bubble map - map our cities and create a bubble based on a normalized population with map layer for emissions
+
+2. Scatter plot - pop.density vs. emissions
+
+3. 
+
+## Data Sources
+- Population (Vincent's data)
+- Transportation emissions (Nataliia's data)
+- Land size to create population density
 
 ### Project Description:
 
