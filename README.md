@@ -1,8 +1,42 @@
 # bootcamp-group_project-3
 
-Group Team Members: Anna Rischitelli, Priya Anulacharam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery
+## Commuting vs. Transportation Emissions
 
-Project Description:
+Group Team Members: Anna Rischitelli, Priya Arunachalam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery
+
+### Question:
+Does the population density of a city affect transportation emissions (in top 50 cities in the US by population)? 
+
+Hypothesis: A city with high population density would have a decrease in transportation emissions. 
+
+Primary goals:
+- Overall emissions of a city
+- Population density of each city
+- 
+
+Add ons:
+- Commute numbers
+- City planning initiatives
+- Centralized public transportation
+- Forecast emissions based on population growth
+- Does a city's boundary grow and does that affect emissions
+
+## Visualization
+1. Heat map / bubble map - map our cities and create a bubble based on a normalized population with three map layers 
+    3a. Emissions 
+    3b. Population
+    3c. Emissions by pop.density
+
+2. Scatter plot - pop.density vs. emissions with regression line (Priya)
+
+3. Line chart - emissions vs. population over time (Shadia)
+
+## Data Sources
+- Population (Vincent's data)
+- Transportation emissions (Nataliia's data)
+- Land size to create population density
+
+### Project Description:
 
 1) Your task is to answer a business question by telling a story with data visualizations
 
@@ -14,7 +48,7 @@ Project Description:
 
 5) You will have an ample time in class to work with your group, but expect to put in hours outside of class as well
 
-Requirements:
+### Requirements:
 
 1) Your visualizations must include a Python Flask-powered API, HTML/CSS, JavaScript and at least on database (SQL, MongoDB, SQLite)
 
@@ -31,3 +65,23 @@ Requirements:
 5) Your project must include some level of user-driven interactions (e.g. menus, dropdowns, textboxes)
 
 6) Your final visualization should include at least three views.
+
+
+
+## Final Readme should include:
+ This is the README that describes how to run
+
+This is the database that is used
+
+This is how to run the included code to insert data into the DB
+
+This is how to run the code to spin up the web app and view the visualizations
+
+
+# Steps
+- Vincent + Nataliia import data from CSV
+- Vincent + Nataliia clean and organize data in jupyter notebook/pandas, merge into single clean dataframe
+- Create all three visualizations (and more!) in pandas to make sure they fit what we need BEFORE we go through to d3
+- Create empty database SQlite in pandas
+- Pass this data into SQLite database, follow the same steps as pizza example to create table and pass data through flask app
+- Open app.py
