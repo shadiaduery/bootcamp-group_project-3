@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>Best Camping in Oregon</title>
+    <title>Population Density & Emissions</title>
 
     <!-- Bring in our bootstrap stylesheet -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -24,15 +24,7 @@
         <!-- Create navigation bar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Find The Best Campground in Oregon for You!</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ml-auto">
-                </div>
+                <a class="navbar-brand" href="index.html">A Study of Population Density vs. Emissions</a>
                 </ul>
             </div>
             </div>
@@ -40,22 +32,82 @@
         <!-- End of navigation bar -->
 
         <!-- Beginning of Home Page Content -->
-        <!-- Main Map Box -->
+        <!-- 1st Visualization Box -->
         <br>
         <div class="container">
             <div class="row">
-                <div class="col-md-7">
-                    <h3 class="box-header">Map of Camgrounds in Oregon</h3>
+                <div class="col-md-12">
+                    <h3 class="box-header">Population Density vs. City Emissions</h3>
                     <hr>
                     <!-- <img src="Resources/Fig1_Lat_v_Temp.png" alt="Latitude vs Max Temp" class="comparison-main-image" class="image"/> -->
-                    <p style="margin-bottom: 2.5em;">The purpose of this project was to analyze how weather changes as
-                        you get closer to the equator. To accomplish this analysis, we first pulled data from the
-                        OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+                    <p style="margin-bottom: 2.5em;">The purpose of this project is to analyze if a city's transportation emissions is correlated or affected by a city's population density. To accomplish this analysis, we first pulled data from the
+                        _____ and  ______ to assemble a dataset of the top US cities (by population density).</p>
                 </div>
-                <!-- End Summary Box (but keep on same row) -->
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="box-header">Business Question</h4>
+                    <hr>
+                    <!-- <img src="Resources/Fig1_Lat_v_Temp.png" alt="Latitude vs Max Temp" class="comparison-main-image" class="image"/> -->
+                    <p style="margin-bottom: 1.5em;">Does the population density of a city affect transportation emissions (in top 50 cities in the US by population)?</p>
+                    <p style="margin-bottom: 1.5em;">Our hypothesis is that a city with higher population density would have a decrease in transportation emissions. </p>
                 <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Visualization #1</h4>
+                    <p>Heat map / bubble map - map our cities and create a bubble based on a normalized population with three map layers 
+                        3a. Emissions 
+                        3b. Population
+                        3c. Emissions by pop.density</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                <div id="visualization1">
+                    <!-- APPEND VIZ 1 HERE -->
+                </div>
+            </div>
+        </div>
+        <!-- End 1st Visualization Box (but keep on same row) -->
+        <!-- 2nd Visualization Box -->
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Visualization #2</h4>
+                <p>Scatter plot - pop.density vs. emissions with regression line</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="visualization2">
+                <!-- APPEND VIZ 2 HERE -->
+                </div>
+            </div>
+        </div>
+        <!-- End 2nd Visualization Box (but keep on same row) -->
+        <!-- 3rd Visualization Box -->
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Visualization #3</h4>
+                <p>Line chart - emissions vs. population over time</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                <div id="visualization3">
+                <!-- APPEND VIZ 3 HERE -->
+                </div>
+            </div>
+        </div>
+
+        <!-- End 3rd Visualization Box (but keep on same row) -->
+                <br>
+                
                 <!-- Latest News Box -->
-                <div class="container">
+                <!-- <div class="container">
                     <div class="row">
                         <div class="col-md-5">
                             <h3 class="box-header">Latest Camping News</h3>
@@ -65,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-                <br>
+                <br> -->
                 <!-- End Visualization Box -->
 
 
