@@ -34,7 +34,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     # Return template and data
-    return render_template("data/index.html")
+    return render_template("index.html")
 
 @app.route("/emission")
 def emission_pop():
