@@ -21,7 +21,7 @@ var chartGroup = svg.append("g")
 
 // either works!
 // url = "http://127.0.0.1:5000/pizzas"
-url = "http://127:0.0.1:5000/emission"
+url = "http://127.0.0.1:5000/emission"
 
 d3.json(url).then(function(data) {
     console.log(data);
