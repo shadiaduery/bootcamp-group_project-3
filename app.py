@@ -70,8 +70,9 @@ def emission_pop():
         emission_pop_dic["emissions2015"]=i.emissions2015
         emission_pop_dic["emissions2016"]=i.emissions2016
         emission_pop_dic["emissions2017"]=i.emissions2017
-        emission_population_list.append(emission_pop_dic)
         
+        emission_population_list.append(emission_pop_dic)
+
     session.close()
 
     return jsonify(emission_population_list)

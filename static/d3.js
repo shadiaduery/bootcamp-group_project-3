@@ -11,7 +11,7 @@ var margin = {
 var height = svgHeight - margin.top - margin.bottom;
 var width = svgWidth - margin.left - margin.right;
 
-var svg = d3.select(".chart")
+var svg = d3.select(".visualization1")
     .append("svg")
     .attr("height", svgHeight)
     .attr("width", svgWidth);
@@ -25,6 +25,5 @@ url = "http://127.0.0.1:5000/emission"
 
 d3.json(url).then(function(data) {
     console.log(data);
-
 });
 
