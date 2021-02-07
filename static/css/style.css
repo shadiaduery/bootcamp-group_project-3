@@ -1,0 +1,24 @@
+
+.footer {
+  height: 50px;
+  margin-top: 0px;
+  background-color: blue;
+}
+
+#mapid,
+body,
+html {
+  height: 1000px;
+}
+
+.legend {
+  line-height: 18px;
+  color: rgb(255, 255, 255);
+}
+.legend i {
+  width: 40px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
