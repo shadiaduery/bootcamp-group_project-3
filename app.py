@@ -1,5 +1,8 @@
 import numpy as np
+import os
+import pandas as pd
 from flask import render_template
+from flask import Flask, render_template,json,current_app as app
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
@@ -35,6 +38,19 @@ app = Flask(__name__)
 def home():
     # Return template and data
     return render_template("index.html")
+
+@app.route("/scatter")
+def scatter_pop():
+
+    # df= pd.read_csv("data/scatter_pop_emi.csv", encoding="utf-8")
+    # SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    # filename= os.path.join(app.static_folder,'static','test_json.json')
+    # json_url= os.path.join(SITE_ROOT, "static", "test_json.json")
+    with open("static/emission_population.json") as f:
+        data=json.load(f)
+    # data=json.load(open(json_url))
+    # return render_template(json.load(open(json_url)))
+    return data
 
 @app.route("/emission")
 def emission_pop():
