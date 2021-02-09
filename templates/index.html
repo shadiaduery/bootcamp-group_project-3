@@ -143,6 +143,9 @@
                 <hr>
                 <p>Scatter plot - pop.density vs. emissions with regression line</p>
                 <div id="visualization2">
+                <div id="scatter"></div>
+                <select id="selDataset" onchange="optionChanged(this.value)">
+                </select>
                 <!-- APPEND VIZ 2 HERE -->
                 <br>
                 </div>
@@ -186,10 +189,11 @@
         crossorigin=""></script>    
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="text/javascript" src="../static/config.js"></script>
-    <!-- <script src="{{ url_for('static', filename='d3.js') }}"></script>  -->
     <script src="{{ url_for('static', filename='map.js') }}"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="{{ url_for('static', filename='bar.js') }}"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='d3.js') }}"></script> 
     
 
     </body>
