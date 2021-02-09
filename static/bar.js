@@ -1,79 +1,122 @@
-// function bargraph(id) {
+function cityselection(City) {
+    
+    url = "http://127.0.0.1:5000/emission"
+    
+    d3.json(url).then((data)=> {
+        console.log(data);
+        
+        var cities = data.map(c=>c.City === City)[0];
+        console.log(cities);
+
+        var citynames = d3.select("#sample-metadata");
+
+        citynames.html("");
+
+        Object.entries(cities).forEach((value) => {
+            citynames.append("h5").text(value[0]);
+        });
+
+    });
+}
+
+cityselection();
+
+function linegraph(City) {
 
     url = "http://127.0.0.1:5000/emission"
     
-    d3.json(url).then(function(data) {
+    d3.json(url).then((data)=> {
         console.log(data);
-        
-        // Create variables to hold all the data needed to create the visualizations
-        var cities = data.City.filter(d=> d.City === City[0]);
+
+        var cities = data.map(c=>c.City);
         console.log(cities);
-        // var samples = data.samples.filter(sample => sample.id.toString()===id)[0];
-        // console.log(samples);
 
-        var states = data.map(s=> s.State);
-        console.log(states);
+        console.log(City);
 
-        var emissions = data.map(e=> e.emissions2010);
+        data.forEach(d => console.log(d.City));
+
+        var city = data.find(d => d.City == City);
+        console.log(city);
+
+        var emissions = []
+        Object.entries(city).forEach(([key, value])=>{
+            emissions.push(` ${value}`);
+        });
+
+        var labels = []
+        Object.entries(city).forEach(([key, value])=>{
+            labels.push(` ${key}`);
+
+        });
+
+        emissions = emissions.slice(13,21); 
         console.log(emissions);
 
-        var years = Object.entries(data.forEach(([key[13]])));
+        years = labels.slice(13,21); 
+        
         console.log(years);
         
+        // Use the created variables to create the visualizations
+        // Go to the HTML to identify the name holding the visualizations ("bar", "bubble", "gauge", and a "pie")
+        var trace = {
+            x: years,
+            y: emissions,
+            text: years,
+            type: "line",
+            orientation: "h",
+        };   
+
+        var data = [trace];
+        
+        var layout = {
+            title: "Emission CO2 Metric Tones",
+            yaxis: {
+                tickmode: "linear",
+            },
+            margin: {
+                l: 100,
+                r: 100,
+                t: 100,
+                b: 100
+            }
+        };
+
+        Plotly.newPlot("visualization1", data, layout);
+
     });
 
-        // emissions=[]
+}
 
-        // var emissions = Object.entries(data.forEach(([key,value]) => {
-        //     (`${key} ${value}`);
+linegraph();
 
-        //     console.log(emissions);
-        // }));
+function optionChanged(City){
+    linegraph(City);
+    cityselection(City);
+}
 
-        
-            // htmlDemographicInfo.append(emissions).text(key[0].toUpperCase() + ": " + key[1] + "\n");
+function dropdown () {
+    var drop_down = d3.select("#selDataset");
 
+    url = "http://127.0.0.1:5000/emission"
     
+    d3.json(url).then((data)=> {
+        console.log(data);
 
-        // var samples = data.samples.filter(sample => sample.id.toString()===id)[0];
-        // console.log(samples);
+        var cities = data.map(c=>c.City);
 
-        // var sampleValues = samples.sample_values.slice(0, 10).reverse();
-        // console.log(sampleValues);
+        var SelectID = cities;
+        console.log(SelectID);
 
-        // var OtuIds = samples.otu_ids.slice(0, 10).reverse();
-        // console.log (OtuIds)
-        // var OtuIds1 = OtuIds.map(data => "OTU"+ data)
-        // console.log(OtuIds1);
+        // Use the forEach method to append all the ids to the dropdown menu
+        SelectID.forEach(function(City) {
+            drop_down.append('option').text(City).property("value");
+        });
 
-        // var OtuLabels = samples.otu_labels.slice(0, 10).reverse();
-        // console.log (OtuLabels);
-
-    //     // Use the created variables to create the visualizations
-    //     // Go to the HTML to identify the name holding the visualizations ("bar", "bubble", "gauge", and a "pie")
-    //     var trace1 = {
-    //         x: sampleValues,
-    //         y: OtuIds1,
-    //         text: OtuLabels,
-    //         type: "bar",
-    //         orientation: "h",
-    //     };   
-
-    //     var data1 = [trace1];
+        cityselection(cities[0]);
+        linegraph(cities[0]);
         
-    //     var layout1 = {
-    //         title: "Top 10 OTU",
-    //         yaxis: {
-    //             tickmode: "linear",
-    //         },
-    //         margin: {
-    //             l: 70,
-    //             r: 50,
-    //             t: 50,
-    //             b: 50
-    //         }
-    //     };
 
-    //     Plotly.newPlot("bar", data1, layout1);
+    });
+}
 
-    // })};
+dropdown();
