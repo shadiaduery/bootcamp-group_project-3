@@ -27,22 +27,22 @@ var chartGroup = svg.append("g")
 // url = "http://127.0.0.1:5000/pizzas"
 // url = "http://127.0.0.1:5000/emission"
 
-url = "http://127.0.0.1:5000/scatter"
+queryUrl = "http://127.0.0.1:5000/scatter"
 
 
 function getScatterPlot(year) {
 
-    d3.json(url).then(function (emission) {
-        console.log(year)
+    d3.json(queryUrl).then(function (emission) {
+        // console.log(year)
         // console.log("selecting data")
         var emission_population = []
-        // emission_population = emission[year].Values
-        console.log(emission[])
+        emission_population = emission[year].Values
+        console.log(emission)
 
         var emi = []
         var pop = []
         var city=[]
-        emission.forEach(function (data) {
+        emission_population.forEach(function (data) {
             emi.push(data.Emission)
             pop.push(data.Population)
             city.push(data.City)
@@ -75,15 +75,15 @@ function getScatterPlot(year) {
 
     });
 }
-function optionChanged(year) {
+function scatterChange(year) {
     getScatterPlot(year)
     // console.log("called")
 
 }
 
 function init() {
-    var dropdownMenu = d3.selectAll("#selDataset");
-    d3.json(url).then(function (emission) {
+    var dropdownMenu = d3.selectAll("#Dataset");
+    d3.json(queryUrl).then(function (emission) {
         // console.log(emission)
         // console.log("xxxx")
         // console.log(emission[2011].Year)
