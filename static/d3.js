@@ -27,17 +27,17 @@ var chartGroup = svg.append("g")
 // url = "http://127.0.0.1:5000/pizzas"
 // url = "http://127.0.0.1:5000/emission"
 
-url = "http://127.0.0.1:5000/scatter"
+queryUrl = "http://127.0.0.1:5000/scatter"
 
 
 function getScatterPlot(year) {
 
-    d3.json(url).then(function (emission) {
-        console.log(year)
+    d3.json(queryUrl).then(function (emission) {
+        // console.log(year)
         // console.log("selecting data")
         var emission_population = []
         emission_population = emission[year].Values
-        console.log(emission_population)
+        console.log(emission)
 
         var emi = []
         var pop = []
@@ -47,6 +47,9 @@ function getScatterPlot(year) {
             pop.push(data.Population)
             city.push(data.City)
         });
+        console.log(emi);
+        console.log(pop);
+        console.log(city);
         var trace1 = {
             x: pop,
             y: emi,
@@ -72,34 +75,34 @@ function getScatterPlot(year) {
 
     });
 }
-function optionChanged(year) {
+function scatterChange(year) {
     getScatterPlot(year)
     // console.log("called")
 
 }
 
 function init() {
-    var dropdownMenu = d3.selectAll("#selDataset");
-    d3.json(url).then(function (emission) {
-        console.log(emission)
-        console.log("xxxx")
-        console.log(emission[2011].Year)
-        console.log("xxxxxxxxx")
+    var dropdownMenu = d3.selectAll("#Dataset");
+    d3.json(queryUrl).then(function (emission) {
+        // console.log(emission)
+        // console.log("xxxx")
+        // console.log(emission[2011].Year)
+        // console.log("xxxxxxxxx")
         //var year_data = [emission[2010].Year, emission[2011].Year,emission[2012].Year,
         //                emission[2013].Year,emission[2014].Year,emission[2015].Year,
         //                emission[2016].Year,emission[2017].Year]
         
-        console.log("YYYYYYYYY")
-        console.log(year_data)
+        // console.log("YYYYYYYYY")
+        // console.log(year_data)
 
-        console.log("qwertyu")
+        // console.log("qwertyu")
         var year_data = [];
         for (let i = 2010; i < 2018 ; i++) {
             year_data.push(emission[i].Year)
-            console.log(emission[i].Year)
+            // console.log(emission[i].Year)
         }
-        console.log(year_data)
-        console.log("qwertyu")
+        // console.log(year_data)
+        // console.log("qwertyu")
         year_data.forEach(function (year) {
             dropdownMenu.append("option").text(year).property("value");
             //console.log(year_data[0])
