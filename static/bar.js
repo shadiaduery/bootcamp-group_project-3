@@ -67,6 +67,7 @@ function linegraph(City) {
             name: 'Emissions',
             text: years,
             type: "line",
+            line: {width: 3},
             orientation: "h",
         };   
 
@@ -75,8 +76,8 @@ function linegraph(City) {
             y: population,
             name: 'Population',
             yaxis: "y2",
-            // text: years,
             type: "line",
+            line: {width: 3},
             orientation: "h",
         };   
 
@@ -84,13 +85,12 @@ function linegraph(City) {
         var data = [trace1, trace2];
         
         var layout = {
-            title: "Emission CO2 Metric Tones",
-            yaxis: {title: 'Emissions'},
+            title: "Carbon Emissions and Population Growth Comparison <br> by Cities in the US (2010-2017)",
+            yaxis: {title: 'Emissions (CO2 Metric Tones)'},
             yaxis2:{
-                title: "Population",
+                title: "Population (million)",
                 overlaying: "y",
-                side: "right",
-                tickmode: "linear"
+                side: "right"
             },
             margin: {
                 l: 100,
