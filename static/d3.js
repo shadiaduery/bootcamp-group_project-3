@@ -58,7 +58,7 @@ function getScatterPlot(year) {
         var layout = {
             title: "Population vs Emission over all Cities",
             margin: {
-                l: 100,
+                l: 50,
                 r: 100,
                 t: 100,
                 b: 100
