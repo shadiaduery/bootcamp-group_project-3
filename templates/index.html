@@ -86,22 +86,18 @@
   <br>
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
-        <h4 class="box-header">Business Question</h4>
-        <!-- <img src="Resources/Fig1_Lat_v_Temp.png" alt="Latitude vs Max Temp" class="comparison-main-image" class="image"/> -->
-        <p style="margin-bottom: 1.5em;">Does the population density of a city affect transportation emissions (in top
-          50 cities in the US by population)?</p>
-        <p style="margin-bottom: 1.5em;">Our hypothesis is that a city with higher population density would have a
-          decrease in transportation emissions. </p>
+      <div class="col-md-12">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat.</p>
         <br>
-      </div>
-      <div class="col-md-6">
-        <h4 class="box-header">Data Sources</h4>
-        <ul>
-          <li>Population data from ____</li>
-          <li>Transportation emissions from the US Census</li>
-          <li>Land size (to create population density)</li>
-        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat.</p>
         <br>
       </div>
     </div>
@@ -157,8 +153,9 @@
             <div id="scatter" class="center"></div>
             </select>
             <span class="text-muted">
-              <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip
                 ex ea commodo consequat.
               </i>
             </span>
@@ -203,37 +200,57 @@
     </div>
   </div>
   <br>
-  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h6 class="box-header">Data Sources</h6>
+        <ul>
+          <li>Population data from ____</li>
+          <li>Transportation emissions from the US Census</li>
+          <li>Land size (to create population density)</li>
+        </ul>
+        <br>
+      </div>
+      <div class="col-md-8">
+        <h6 class="box-header">UO Data Analytics Project #3</h6>
+        <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          ex ea commodo consequat.
+        </i>
+        <br>
+      </div>
+    </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <span class="text-muted">
-      <p style="margin-bottom: 1.5em; margin-left: 1.5em; margin-top: 1.5em;">A Study of City's Population Density vs.
-        Emissions by Anna Rischitelli, Priya Arunachalam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery.
-      </p>
-    </span>
-  </footer>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <span class="text-muted">
+        <p style="margin-bottom: 1.5em; margin-left: 1.5em; margin-top: 1.5em;">A Study of City's Population Density
+          vs.
+          Emissions by Anna Rischitelli, Priya Arunachalam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery.
+        </p>
+      </span>
+    </footer>
 
-  <!-- Boiler plate requirements-->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-    crossorigin=""></script>
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script type="text/javascript" src="../static/config.js"></script>
-  <script src="{{ url_for('static', filename='map.js') }}"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="{{ url_for('static', filename='bar.js') }}"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="{{ url_for('static', filename='d3.js') }}"></script>
+    <!-- Boiler plate requirements-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="text/javascript" src="../static/config.js"></script>
+    <script src="{{ url_for('static', filename='map.js') }}"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='bar.js') }}"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='d3.js') }}"></script>
 
 
 </body>
