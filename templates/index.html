@@ -156,7 +156,16 @@
                 <hr>
                 <p>Line chart - year (x) and emissions (y) with top 10 cities on chart (select by population size)</p>
                 <div id="visualization3">
-                <!-- APPEND VIZ 3 HERE -->
+                  <div class="chart" id="bargraph"> 
+                    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+                    <script>
+                      var graphs = {{plot | safe}};
+                      Plotly.plot('bargraph',graphs,{});
+                    </script>
+
+                  </div>
+                  <!-- APPEND VIZ 3 HERE -->
                 </div>
             </div>
         </div>
