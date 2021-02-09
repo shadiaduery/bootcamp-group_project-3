@@ -117,6 +117,17 @@
                 </div>
             </div>
             <div class="row">
+              <div class="col-md-12">
+                <div class="well">
+                  <h5>City Name</h5>
+                  <select id="selDataset"onchange="optionChanged(this.value)"></select>
+                </div>
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Emission Info</h3>
+                  </div>
+                  <div id="sample-metadata" class="panel-body"></div>
+                </div>
                 <div class="col-md-12">
                 <div id="visualization1">
                     <!-- APPEND VIZ 1 HERE -->
@@ -175,9 +186,13 @@
         crossorigin=""></script>    
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="text/javascript" src="../static/config.js"></script>
-    <script src="{{ url_for('static', filename='d3.js') }}"></script> 
+    <!-- <script src="{{ url_for('static', filename='d3.js') }}"></script>  -->
     <script src="{{ url_for('static', filename='map.js') }}"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='bar.js') }}"></script>
+    
 
     </body>
 
 </html>
+
