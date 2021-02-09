@@ -22,3 +22,12 @@ html {
   margin-right: 8px;
   opacity: 0.7;
 }
+
+div.bubble {
+  height: 10em;
+  position: relative }              
+div.bubble p {
+  margin: 0;
+  position: absolute;               
+  top: 50%;                         
+  transform: translate(0, -50%) }   
