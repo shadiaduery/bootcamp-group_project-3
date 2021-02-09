@@ -3,10 +3,10 @@ function cityselection(City) {
     url = "http://127.0.0.1:5000/emission"
     
     d3.json(url).then((data)=> {
-        console.log(data);
+        // console.log(data);
         
         var cities = data.map(c=>c.City === City)[0];
-        console.log(cities);
+        // console.log(cities);
 
         var citynames = d3.select("#sample-metadata");
 
@@ -26,17 +26,17 @@ function linegraph(City) {
     url = "http://127.0.0.1:5000/emission"
     
     d3.json(url).then((data)=> {
-        console.log(data);
+        // console.log(data);
 
         var cities = data.map(c=>c.City);
-        console.log(cities);
+        // console.log(cities);
 
-        console.log(City);
+        // console.log(City);
 
         data.forEach(d => console.log(d.City));
 
         var city = data.find(d => d.City == City);
-        console.log(city);
+        // console.log(city);
 
         var emissions = []
         Object.entries(city).forEach(([key, value])=>{
@@ -49,29 +49,48 @@ function linegraph(City) {
 
         });
 
+        population = emissions.slice(4,12);
+        console.log(population);
+
         emissions = emissions.slice(13,21); 
         console.log(emissions);
 
         years = labels.slice(13,21); 
         
-        console.log(years);
+        // console.log(years);
         
         // Use the created variables to create the visualizations
         // Go to the HTML to identify the name holding the visualizations ("bar", "bubble", "gauge", and a "pie")
-        var trace = {
-            x: years,
+        var trace1 = {
+            x: [2010,2011,2012,2013,2014,2015,2016,2017],
             y: emissions,
+            name: 'Emissions',
             text: years,
             type: "line",
             orientation: "h",
         };   
 
-        var data = [trace];
+        var trace2 = {
+            x: [2010,2011,2012,2013,2014,2015,2016,2017],
+            y: population,
+            name: 'Population',
+            yaxis: "y2",
+            // text: years,
+            type: "line",
+            orientation: "h",
+        };   
+
+
+        var data = [trace1, trace2];
         
         var layout = {
             title: "Emission CO2 Metric Tones",
-            yaxis: {
-                tickmode: "linear",
+            yaxis: {title: 'Emissions'},
+            yaxis2:{
+                title: "Population",
+                overlaying: "y",
+                side: "right",
+                tickmode: "linear"
             },
             margin: {
                 l: 100,
