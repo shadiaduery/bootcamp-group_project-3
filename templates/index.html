@@ -46,7 +46,7 @@
         <br>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-16 col-md-12 col-md-8">
                     <h3 class="box-header">Population Density vs. City Emissions</h3>
                     <hr>
                     <!-- <img src="Resources/Fig1_Lat_v_Temp.png" alt="Latitude vs Max Temp" class="comparison-main-image" class="image"/> -->
@@ -86,96 +86,172 @@
         <br>
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-16 col-md-12 col-md-8">
                     <h4 class="box-header">Business Question</h4>
                     <!-- <img src="Resources/Fig1_Lat_v_Temp.png" alt="Latitude vs Max Temp" class="comparison-main-image" class="image"/> -->
                     <p style="margin-bottom: 1.5em;">Does the population density of a city affect transportation emissions (in top 50 cities in the US by population)?</p>
                     <p style="margin-bottom: 1.5em;">Our hypothesis is that a city with higher population density would have a decrease in transportation emissions. </p>
                 <br>
-                </div>
-                <div class="col-md-6">
-                    <h4 class="box-header">Data Sources</h4>
-                    <!-- <img src="Resources/Fig1_Lat_v_Temp.png" alt="Latitude vs Max Temp" class="comparison-main-image" class="image"/> -->
-                    <ul>
-                        <li>Population data from ____</li>
-                        <li>Transportation emissions from the US Census</li>
-                        <li>Land size (to create population density)</li>
-                      </ul>
-                <br>
-                </div>
-            </div>
+            
             <div class="row">
               <div class="col-md-16 col-md-12 col-md-8">
-                  
-                    <h4>Visualization #1</h4>
-                    <hr>
-                    <div id="mapid" class="img-fluid"></div>
-                    <p>Heat map / bubble map - map our cities and create a bubble based on a normalized population with three map layers 
-                        3a. Emissions 
-                        3b. Population
-                        3c. Emissions by pop.density</p>
-                </div>
+                <!-- APPEND MAP VIZ HERE -->
+                <div id="mapid" class="img-fluid"></div>
+                <br>
+                <span class="text-muted">
+                  <i>Heat map / bubble map - map our cities and create a bubble based on a normalized population with three map
+                    layers
+                  </i>
+                </span>
+                <hr>
+              </div>
             </div>
+          </div>
+          <br>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-16 col-md-12 col-md-8">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                  ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                  ea commodo consequat.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                  ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                  ea commodo consequat.</p>
+                <br>
+              </div>
+            </div>
+
             <div class="row">
               <div class="col-md-16 col-md-12 col-md-8">
                 <div class="well">
-                  <h5>Select City</h5>
-                  <select id="selDataset"onchange="optionChanged(this.value)"></select>
+                  <h4>How are a city's population and overall transportation emissions changing overtime?</h4>
+                  <span class="text-muted">
+                    <p>Select a city to view how population and emissions change over time.
+                    </p>
+                  </span>
+                  <select id="selDataset" onchange="optionChanged(this.value)"></select>
                 </div>
                 <div class="panel panel-primary">
                   <div class="panel-heading">
-                    <!-- <h5 class="panel-title">Emission Info</h5> -->
+                    <!-- <h3 class="panel-title">Emission Info</h3> -->
                   </div>
                   <div id="sample-metadata" class="panel-body"></div>
                 </div>
-                <div id="visualization1"  class="img-fluid">
-                    <!-- APPEND VIZ 1 HERE -->
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-md-16 col-md-12 col-md-8">
-                <h4>Visualization #2</h4>
-                <hr>
-                <p>Scatter plot - pop.density vs. emissions with regression line</p>
-                <div id="visualization2" class="img-fluid">
-                <div id="scatter"></div>
-                <select id="Dataset" onchange="scatterChange(this.value)">
-                </select>
-                <!-- APPEND VIZ 2 HERE -->
-                </div>
-            </div>
-        <div class="row">
-          <div class="col-md-16 col-md-12 col-md-8">
-                <h4>Visualization #3</h4>
-                <hr>
-                <p>Line chart - year (x) and emissions (y) with top 10 cities on chart (select by population size)</p>
-                <div id="visualization3"  >
-                  <div class="chart" id="bargraph" class="img-fluid"> 
-                    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-                    <script>
-                      var graphs = {{plot | safe}};
-                      Plotly.plot('bargraph',graphs,{});
-                    </script>
-
+                <div class="col-md-16 col-md-12 col-md-8">
+                  <div id="visualization1" class="img-fluid">
+                    <!-- APPEND LINE CHART HERE -->
                   </div>
-                  <!-- APPEND VIZ 3 HERE -->
                 </div>
-            </div>
-        </div>
+                <span class="text-muted">
+                  <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat.
+                  </i>
+                </span>
+                <hr>
+                <br>
+              </div>
 
+
+              <br>
+              <br>
+              <div class="row">
+                <div class="col-md-16 col-md-12 col-md-8">
+                  <h4>Do larger cities have higher or lower transportation emissions?</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat.</p>
+                  <span class="text-muted">
+                    <p>Select a year to view how a city's population may affect their transportation emmisions.
+                    </p>
+                  </span>
+                  <div id="visualization2">
+                    <!-- APPEND SCATTER PLOT HERE -->
+                    <select id="Dataset" onchange="scatterChange(this.value)"></select>
+                    <div id="scatter" class="img-fluid class"></div>
+                    </select>
+                    <span class="text-muted">
+                      <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip
+                        ex ea commodo consequat.
+                      </i>
+                    </span>
+                    <hr>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+           
+            <br>
+            <div class="row" class="col-md-16 col-md-12 col-md-8">
+              <h4>Population density's impact on a city's transportation emissions</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat.</p>
+              <span class="text-muted">
+                <p>Click the play button to view how city's population density and emissions change during 2010 to 2017.
+                </p>
+              </span>
+            </div>
+            <div class="row" class="col-md-16 col-md-12 col-md-8" class="bubble">
+              <div id="visualization3">
+                <!-- APPEND BUBBLE CHART HERE -->
+                <div class="chart" id="bargraph" class="img-fluid" class="center">
+                  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+                  <script>
+                    var graphs = {{ plot | safe}};
+                    Plotly.plot('bargraph', graphs, {});
+                  </script>
+                  <br>
+                  <span class="text-muted">
+                    <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                      ex ea commodo consequat.
+                    </i>
+                  </span>
+                  <hr>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <h6 class="box-header">Data Sources</h6>
+                <ul>
+                  <li>Population data from ____</li>
+                  <li>Transportation emissions from the US Census</li>
+                  <li>Land size (to create population density)</li>
+                </ul>
+                <br>
+              </div>
+              <div class="col-md-8">
+                <h6 class="box-header">UO Data Analytics Project #3</h6>
+                <p>A Study of City's Population Density vs. Emissions by Anna Rischitelli, Priya Arunachalam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery. Study conducted for Project #3 of our University of Oregon Data Analytics class. February 2021.
+                </p>
+                <br>
+              </div>
+            </div>
         
-<br>
-<br>
-    <!-- FOOTER -->
-    <footer class="footer">
-        <span class="text-muted">
-            <p style="margin-bottom: 1.5em;">A Study of City's Population Density vs. Emissions by Anna Rischitelli, Priya Arunachalam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery.
-            </p>
-        </span>
-    </footer>
+            <!-- FOOTER
+            <footer class="footer">
+              <span class="text-muted">
+                <p style="margin-bottom: 1.5em; margin-left: 1.5em; margin-top: 1.5em;">A Study of City's Population Density
+                  vs.
+                  Emissions by Anna Rischitelli, Priya Arunachalam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery.
+                </p>
+              </span>
+            </footer> -->
+          
 
     <!-- Boiler plate requirements-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -187,7 +263,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
         crossorigin=""></script>    
     <script src="https://d3js.org/d3.v5.min.js"></script>

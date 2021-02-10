@@ -108,7 +108,7 @@ function linegraph(City) {
 
 }
 
-flinegraph();
+linegraph();
 
 function optionChanged(City){
     linegraph(City);
