@@ -16,7 +16,20 @@
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
     <link rel=“stylesheet” href=“https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css”
     integrity=“sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2” crossorigin=“anonymous”>
-</head>
+    <style>
+      h1 {
+        text-align: center;
+      }
+  
+      h2 {
+        text-align: right;
+      }
+  
+      h3 {
+        text-align: right;
+      }
+    </style>
+  </head>
 
 <body>
 <!-- Create navigation bar -->
@@ -47,12 +60,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-16 col-md-12 col-md-8">
-                    <h3 class="box-header">Population Density vs. City Emissions</h3>
+                    <h1 class="box-header">Population Density vs. City Emissions</h1>
                     <hr>
                     <!-- <img src="Resources/Fig1_Lat_v_Temp.png" alt="Latitude vs Max Temp" class="comparison-main-image" class="image"/> -->
                     <p style="margin-bottom: 2.5em;">The purpose of this project is to analyze if a city's transportation emissions is correlated or affected by a city's population density. To accomplish this analysis, we first pulled data from the
                         _____ and  ______ to assemble a dataset of the top US cities (by population density).</p>
                 </div>
+            </div>
+            <div class="row">
+              <div class="col-md-16 col-md-12 col-md-8">
+                <!-- APPEND MAP VIZ HERE -->
+                <div id="mapid" class="img-fluid"></div>
+                <br>
+                <span class="text-muted">
+                  <i>Heat map / bubble map - map our cities and create a bubble based on a normalized population with three map
+                    layers
+                  </i>
+                </span>
+                <hr>
+              </div>
             </div>
         </div>
         <div class="container">
@@ -92,20 +118,6 @@
                     <p style="margin-bottom: 1.5em;">Does the population density of a city affect transportation emissions (in top 50 cities in the US by population)?</p>
                     <p style="margin-bottom: 1.5em;">Our hypothesis is that a city with higher population density would have a decrease in transportation emissions. </p>
                 <br>
-            
-            <div class="row">
-              <div class="col-md-16 col-md-12 col-md-8">
-                <!-- APPEND MAP VIZ HERE -->
-                <div id="mapid" class="img-fluid"></div>
-                <br>
-                <span class="text-muted">
-                  <i>Heat map / bubble map - map our cities and create a bubble based on a normalized population with three map
-                    layers
-                  </i>
-                </span>
-                <hr>
-              </div>
-            </div>
           </div>
           <br>
           <div class="container">

@@ -1,28 +1,4 @@
 
-var svgWidth = 960
-var svgHeight = 660;
-
-var margin = {
-    top: 20,
-    right: 40,
-    bottom: 100,
-    left: 100
-};
-
-var height = svgHeight - margin.top - margin.bottom;
-var width = svgWidth - margin.left - margin.right;
-
-// console.log(width)
-// console.log(height)
-
-var svg = d3.select("#visualization2")
-    .append("svg")
-    .attr("height", svgHeight)
-    .attr("width", svgWidth);
-
-var chartGroup = svg.append("g")
-    .attr("transform", `translate(${margin.left}, ${margin.top})`);
-
 // either works!
 // url = "http://127.0.0.1:5000/pizzas"
 // url = "http://127.0.0.1:5000/emission"
