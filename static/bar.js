@@ -73,7 +73,6 @@ function linegraph(City) {
 
         var trace2 = {
             x: [2010,2011,2012,2013,2014,2015,2016,2017],
-            name: 'Years',
             y: population,
             name: 'Population',
             yaxis: "y2",
@@ -87,8 +86,7 @@ function linegraph(City) {
         
         var layout = {
             title: "Carbon Emissions and Population Growth Comparison <br> by Cities in the US (2010-2017)",
-            xaxis:{title:'Years'},
-            yaxis: {title: 'Emissions (CO2 Kg)'},
+            yaxis: {title: 'Emissions (CO2 Metric Tones)'},
             yaxis2:{
                 title: "Population (million)",
                 overlaying: "y",
