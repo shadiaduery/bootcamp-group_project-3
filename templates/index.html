@@ -60,10 +60,8 @@
       <div class="col-md-12 col-md-8">
         <h1 class="box-header">Population Density vs. City Emissions</h1>
         <br>
-        <p style="margin-bottom: 2.5em;">The purpose of this project is to analyze if a city's transportation emissions
-          is correlated or affected by a city's population density. To accomplish this analysis, we first pulled data
-          from the
-          _____ and ______ to assemble a dataset of the top US cities (by population density).</p>
+        <p style="margin-bottom: 2.5em;">
+        </p>
       </div>
     </div>
     <div class="row">
@@ -72,7 +70,11 @@
         <div id="mapid" class="img-fluid"></div>
         <br>
         <span class="text-muted">
-          <i>The map shows top 98 US cities, the size of markers represents CO2 emissions per capita for each city for 2017, the color represents decrease or increase in those emissions comparing 2017 to 2010.
+          <i>This map was created to give a first glance at the data for the top 98 (AK and HI were not included study) 
+            US cities. The data contains population size and CO2 transportation emissions over a period of eight years 
+            (2010-2017). The size of the city markers represents CO2 transportation emissions per capita, and the color
+             of markers was derived from the difference between 2017 and 2010 in CO2 emissions per capita. 
+             The color scale goes from green to red, green representing a decrease in normalized emissions and red an increase.
           </i>
         </span>
         <hr>
@@ -111,25 +113,28 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-md-8">
-        <h2 class="box-header">Does the population density of a city affect transportation emissions?</h2>
+        <h2 class="box-header">Does the population density of a city affect it's transportation CO2 emissions?</h2>
         <br>
       </div>
       <br>
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-md-8">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat.</p>
+            <p>The city of Springfield is a fast-growing middle-sized city in the US. 
+              Currently is at a turning point; this year has reached a population size of 300k and is experiencing 
+              a high rate of migration. The Urban Planning and Sustainable Development Office (UPSDO) is in charge 
+              of crafting a 10-year plan to guide the city's growth path between increased density or urban sprawl. 
+              Springfield is a city that cares about air pollution and its contribution to global carbon emissions 
+              and bases its decisions informed by data analysis. The city has requested its data analytics team to determine
+               if increasing population density increases or reduces transportation carbon emissions. 
+              <br>
+            <br>
+            <h5>Assumptions:</h5>
+            <li>The variables population density and transportation CO2 emissions are highly correlated.</li>
+            <li>Higher-density cities will produce lower transportation emissions per
+              capita assuming that urban design on those cities encourages alternative transportation
+              methods such as walking, biking, public transit, and higher adoption the energy efficiency technologies 
+              (electric-powered transportation, and mass transit).</li></p>
             <br>
           </div>
         </div>
@@ -138,9 +143,17 @@
           <div class="col-md-12 col-md-8">
             <div class="well">
               <h4>How are a city's population and overall transportation emissions changing overtime?</h4>
+              <p>Five trends were observed when sampling over cities. First, the majority of cities’ 
+                population is growing. Second, in most cases, the population is growing at a similar 
+                rate to transportation CO2 emissions. Third, a handful of cities have managed to maintain 
+                a steady population growth while reducing their transportation CO2 emissions, examples are 
+                San Francisco, San Jose, Oakland, and Philadelphia. Fourth, another handful of cities have reduced 
+                their population and increased transportation CO2 emissions, examples are Detroit, Toledo, 
+                Memphis, Chicago. And last, there are cities that have reduced their population and transportation 
+                CO2 emissions, being Baton Rouge an example. </p>
               <span class="text-muted">
-                <p>Select a city to view how population and emissions change over time.
-                </p>
+                <i>Select a city to view how population and emissions change over time.
+                </i>
               </span>
               <select id="selDataset" onchange="optionChanged(this.value)"></select>
             </div>
@@ -156,7 +169,7 @@
               </div>
             </div>
             <span class="text-muted">
-              <i>This graph compares population and transportation carbon emissions over time (2010 – 2017). The graph has a functionality to select 98 US cities to observe the comparison.
+              <i>This graph compares population growth and transportation carbon emissions over time (2010 – 2017). It has a dropdown menu to select a city of a list of 98 US cities to observe this comparison. 
               </i>
             </span>
             <hr>
@@ -169,10 +182,16 @@
           <div class="row">
             <div class="col-md-12 col-md-8">
               <h4>Do larger cities have higher or lower transportation emissions?</h4>
-              <p>From the scatter plot we see a direct correlation between population and emission. Cities with similar population has similar emission levels. The comparison of 2 cities - Houston which has worse emissions levels in a state with least emission control vs. Los Angeles which has lower emission with a state with strict emission controls.</p>
+              <p>The scatter plot shows that cities with similar populations have similar 
+                transportation CO2 emission levels. And when comparing two outlier cities with 
+                similar population sizes, Houston and Los Angeles, we observed that Houston has 
+                higher emissions than Los Angeles. Maybe the differences can be attributed to 
+                emission regulations, being CA more stringent than TX. And when comparing Houston 
+                to NYC, a city with a higher population, we observed that Houston had higher emissions 
+                even with a smaller population. </p>
               <span class="text-muted">
-                <p>Select a year to view how a city's population may affect their transportation emmisions.
-                </p>
+                <i>Select a year to view how a city's population may affect their transportation emmisions.
+                </i>
               </span>
               <div id="visualization2">
                 <!-- APPEND SCATTER PLOT HERE -->
@@ -180,7 +199,8 @@
                 <div id="scatter" class="img-fluid class"></div>
                 </select>
                 <span class="text-muted">
-                  <i>This chart represents the overall Population vs overall Emission for the year 2010-2017 grouped by Cities with higher Population.
+                  <i>This scatter plot represents the relationship between population size and transportation CO2 emissions in 98 US cities. 
+                    It has a dropdown menu to select a year of choice to display the data (2010-2017).
                   </i>
                 </span>
                 <hr>
@@ -193,16 +213,20 @@
         <br>
         <div class="row" class="col-md-12 col-md-8">
           <h4>Population density's impact on a city's transportation emissions</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
+          <p>This bubble graph displays how each city is handling its transportation emissions output about its 
+            population growth. As we can see, cities with larger population numbers aren't necessarily the most 
+            significant offenders to emission output. Density seems to have a much larger play in this scenario. 
+            Most instances show that smaller population sized cities' results contain much more carbon emissions 
+            per person than cities almost ten times their population size. This graph shows that condensing population 
+            and a consolidated urban structure could be the most intelligent way for city planners to look to the future 
+            regarding transportation implementation for a greener life and fewer emissions output for all. </p>
           <span class="text-muted">
-            <p>Click the play button to view how city's population density and emissions change during 2010 to 2017.
-            </p>
+            <i>Click the play button to view how city's population density and emissions change during 2010 to 2017.
+            </i>
           </span>
         </div>
-        <div class="row">
-          <div class="col-md-8" class="bubble">
+        <!-- <div class="row"> -->
+          <div class="col-md-12 col-md-8" class="bubble">
             <div id="visualization3">
               <!-- APPEND BUBBLE CHART HERE -->
               <div class="chart" id="bargraph" class="img-fluid" class="center">
@@ -215,7 +239,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-sm-2">
+
+          <div class="row" class="col-md-12 col-md-8">
             <span class="text-muted">
             <i>This bubble chart visualization shows the population density of each city (person per sq mile) for years 2010-2017 vs. the amount of emissions (in kg) per person per square mile of each city.
             </i>
@@ -223,10 +248,14 @@
             <br>
             <i>To clear the graph and view a selected city, double check one city in the legend on the right side.
             </i>
+          </span>
+          <hr>
+          <br>
+          <br>
+          
           </div>
         </div>
       <br>
-      <hr>
       <br>
       <div class="container">
         <div class="row">

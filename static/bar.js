@@ -50,10 +50,10 @@ function linegraph(City) {
         });
 
         population = emissions.slice(4,12);
-        console.log(population);
+        // console.log(population);
 
         emissions = emissions.slice(13,21); 
-        console.log(emissions);
+        // console.log(emissions);
 
         years = labels.slice(13,21); 
         
@@ -86,7 +86,8 @@ function linegraph(City) {
         var data = [trace1, trace2];
         
         var layout = {
-            title: "Carbon Emissions and Population Growth Comparison <br> by Cities in the US (2010-2017)",
+            title: "Population Growth and Carbon Emissions Comparison <br> by Cities in the US (2010-2017)",
+            autosize: true,
             xaxis: { title: 'Years' },
             yaxis: { title: 'Emissions (CO2 Kg)' },
             yaxis2: {
@@ -98,7 +99,7 @@ function linegraph(City) {
             legend: {
                 x: 1,
                 xanchor: 'right',
-                y: 1.25
+                y: 0.25
             },
             margin: {
                 l: 100,
@@ -127,12 +128,12 @@ function dropdown () {
     url = "http://127.0.0.1:5000/emission"
     
     d3.json(url).then((data)=> {
-        console.log(data);
+        // console.log(data);
 
         var cities = data.map(c=>c.City);
 
         var SelectID = cities;
-        console.log(SelectID);
+        // console.log(SelectID);
 
         // Use the forEach method to append all the ids to the dropdown menu
         SelectID.forEach(function(City) {
