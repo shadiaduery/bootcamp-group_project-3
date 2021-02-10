@@ -1,8 +1,10 @@
-
+//Connection to the flask app
 url = "http://127.0.0.1:5000/emission"
 
+//Opening the data
 d3.json(url).then(function (data) {
-  
+
+  //Creating mapbox base map
   var darkmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 18,
@@ -10,12 +12,12 @@ d3.json(url).then(function (data) {
     id: "dark-v10",
     accessToken: API_KEY
   })
-
+  //Creating geojson for the map
   var geojson = {
     type: "FeatureCollection",
     features: [],
   };
-
+  //Looping through the data in order to create geojson string
   for (i = 0; i < data.length; i++) {
 
     var differenceEmission = (+data[i].emissions2017 / +data[i].Population2017) - (+data[i].emissions2010 / +data[i].Population2010)
@@ -53,29 +55,24 @@ d3.json(url).then(function (data) {
 
   function getColor(d) {
     return d > 35 ? "#b10026" :
-      d > 30 ? "#e31a1c" :
-        d > 25 ? "#fc4e2a" :
-          d > 20 ? "#fd8d3c" :
-            d > 15 ? " #feb24c" :
-              d > 10 ? "#fed976" :
-                d > 5 ? " #ffeda0" :
-                  d > 1 ? "#ffffcc" :
-                  d > -1 ? "#fff" :
-                    d > -5 ? " #a1d99b" :
-                      d > -10 ? " #74c476" :
-                        d > -15 ? "#41ab5d" :
-                          d > -20 ? " #238b45" :
-                            d > -25 ? "#005a32" :
-                              "#FFF";
+      d > 25 ? "#e31a1c" :
+        d > 15 ? " #fc4e2a" :
+          d > 7 ? " #fec44f" :
+            d > 1 ? "#fff7bc" :
+              d > -1 ? "#fff" :
+                d > -7 ? " #a1d99b" :
+                  d > -15 ? "#41ab5d" :
+                    d > -25 ? "#005a32" :
+                      "#FFF";
   }
-  
+
   //Function for creating circle markers
   function createCircles(feature, latlng) {
 
 
     //Markers
     var geojsonMarkerOptions = {
-      radius: feature.properties.emissionsPerPopulation2017/480,
+      radius: feature.properties.emissionsPerPopulation2017 / 480,
       fillColor: getColor(feature.properties.percentDifferenceEmission),
       color: "#000",
       weight: 1,
@@ -93,20 +90,18 @@ d3.json(url).then(function (data) {
 
   //Adding layer to the map
   var myMap = L.map("mapid", {
-    center: [
-      32.8140, -96.9489
-    ],
-    zoom: 10,
+    center: [32.8140, -96.9489],
+    zoom: 4,
     layers: [darkmap, cities]
   });
-  
+
   //Creating a legend
   var legend = L.control({ position: 'bottomright' });
 
   legend.onAdd = function () {
 
     var div = L.DomUtil.create('div', 'info legend'),
-      grades = [-25, -20, -15, -10, -5, -1, 1, 5, 10, 15, 20, 25, 30, 35],
+      grades = [-25, -15, -7, -1, 1, 7, 15, 25, 35],
       labels = ['<strong>Changes in emissions per capita 2017 to 2010 (%)</strong>'];
 
     for (var i = 0; i < grades.length; i++) {
