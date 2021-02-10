@@ -87,12 +87,18 @@ function linegraph(City) {
         
         var layout = {
             title: "Carbon Emissions and Population Growth Comparison <br> by Cities in the US (2010-2017)",
-            xaxis:{title:'Years'},
-            yaxis: {title: 'Emissions (CO2 Kg)'},
-            yaxis2:{
+            xaxis: { title: 'Years' },
+            yaxis: { title: 'Emissions (CO2 Kg)' },
+            yaxis2: {
                 title: "Population (million)",
                 overlaying: "y",
                 side: "right"
+            },
+            showlegend: true,
+            legend: {
+                x: 1,
+                xanchor: 'right',
+                y: 1.25
             },
             margin: {
                 l: 100,
