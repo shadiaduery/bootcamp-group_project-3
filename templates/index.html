@@ -8,17 +8,16 @@
   <!--<link rel="shortcut icon" type="image/jpg" href="/images/favicon.ico"/>-->
 
   <!-- Bring in our bootstrap stylesheet -->
+  
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin="" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
-  <link rel=“stylesheet” href=“https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css”
-    integrity=“sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2” crossorigin=“anonymous”>
   <style>
     h1 {
-      text-align: center;
+      text-align: left;
     }
 
     h2 {
@@ -30,6 +29,8 @@
     }
   </style>
 </head>
+
+
 <body>
   <!-- Create navigation bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -55,6 +56,7 @@
   <!-- Beginning of Home Page Content -->
   <!-- 1st Visualization Box -->
   <br>
+  <div > 
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-md-8">
@@ -79,7 +81,7 @@
                 </ol>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img class="d-block w-100" src="https://www.infometrics.co.nz/wp-content/uploads/2019/08/Large-crowds-825x510.jpg" class="img-fluid" alt="First slide">
+                    <img class="d-block w-100" src="https://www.infometrics.co.nz/wp-content/uploads/2019/08/Large-crowds-825x510.jpg" class="250px150px" alt="First slide">
                   </div>
                   <div class="carousel-item">
                     <img class="d-block w-100" src="https://cw-gbl-gws-prod.azureedge.net/-/media/cw/americas/united-states/insights/marketbeats-images/market-cards/san-francisco-card.jpeg?rev=286a1f8f11904feb92def66a7b816bb9"class="img-fluid" alt="Second slide">
@@ -144,7 +146,6 @@
             <hr>
           </div>
         </div>
-      </div>
 
 
         <div class="row">
@@ -216,12 +217,11 @@
               </div>
             </div>
           </div>
-        </div>
 
 
         <br>
         <div class="row" class="col-md-12 col-md-8">
-          <h4>Population density's impact on a city's transportation emissions</h4>
+          <h4>Does the population density of a city have an  impact on it's transportation emissions?</h4>
           <p>This bubble graph displays how each city is handling its transportation emissions output about its 
             population growth. As we can see, cities with larger population numbers aren't necessarily the most 
             significant offenders to emission output. Density seems to have a much larger play in this scenario. 
@@ -234,6 +234,7 @@
             </i>
           </span>
         </div>
+
         <!-- <div class="row"> -->
           <div class="col-md-12 col-md-8" class="bubble">
             <div id="visualization3">
@@ -254,16 +255,40 @@
             <i>This bubble chart visualization shows the population density of each city (person per sq mile) for years 2010-2017 vs. the amount of emissions (in kg) per person per square mile of each city.
             </i>
             <br>
-            <br>
             <i>To clear the graph and view a selected city, double check one city in the legend on the right side.
             </i>
           </span>
           <hr>
           <br>
           <br>
+
+          <div class="row" class="col-md-12 col-md-8">
+            <h4>Does the population density of a city have an  impact on it's transportation emissions?</h4>
+         <p>
+           <li>We were able to reject our null hypothesis, population density on a city has an impact 
+             on its transportation carbon emissions</li>
+           <li>Some cities have managed to reduce their transportation CO2 emissions and continue it's population growth </li>
+           <li>Due to more stringent state CO2 emissions and stronger urban growth boundaries, pushing for density</li>
+          </p>
+          <hr>
+          <br>
+          <br>
+          </div>
+
+          <div class="row" class="col-md-12 col-md-8">
+            <h4>Recommendations for the city of Springfield</h4>
+         <p>
+           <li>Strong urban growth boundaries</li>
+           <li>Urban design for higher density </li>
+           <li></li>
+          </p>
+          <hr>
+          <br>
+          <br>
+          </div>
           
           </div>
-        </div>
+
       <br>
       <br>
       <div class="container">
@@ -271,9 +296,9 @@
           <div class="col-md-4">
             <h6 class="box-header">Data Sources</h6>
             <ul>
-              <li>Population data from ____</li>
-              <li>Transportation emissions from the US Census</li>
-              <li>Land size (to create population density)</li>
+              <li>Population data from the US Census</li>
+              <li>Transportation emissions Distributed Archive Center for Biogeochemical Dynamics</li>
+              <li> US land size city areas from Wikipedia</li>
             </ul>
             <br>
           </div>
@@ -286,18 +311,9 @@
             <br>
           </div>
         </div>
+      </div>
 
-        <!-- FOOTER
-            <footer class="footer">
-              <span class="text-muted">
-                <p style="margin-bottom: 1.5em; margin-left: 1.5em; margin-top: 1.5em;">A Study of City's Population Density
-                  vs.
-                  Emissions by Anna Rischitelli, Priya Arunachalam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery.
-                </p>
-              </span>
-            </footer> -->
-
-
+    </div>
         <!-- Boiler plate requirements-->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
           integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
