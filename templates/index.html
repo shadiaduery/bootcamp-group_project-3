@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
   <style>
     h1 {
-      text-align: left;
+      text-align: center;
     }
 
     h2 {
@@ -218,6 +218,7 @@
                 <i>Select a year to view how a city's population may affect their transportation emmisions.
                 </i>
               </span>
+              <br>
               <div id="visualization2">
                 <!-- APPEND SCATTER PLOT HERE -->
                 <select id="Dataset" onchange="scatterChange(this.value)"></select>
@@ -251,6 +252,8 @@
             <i>Click the play button to view how city's population density and emissions change during 2010 to 2017.
             </i>
           </span>
+          <br>
+          <br>
         </div>
 
         <!-- <div class="row"> -->
@@ -266,62 +269,60 @@
               </script>
             </div>
           </div>
+          <br>
         </div>
-
-        <div class="row" class="col-md-12 col-md-8">
-          <span class="text-muted">
-            <i>This bubble chart visualization shows the population density of each city (person per sq mile) for years
-              2010-2017 vs. the amount of emissions (in kg) per person per square mile of each city.
-            </i>
+        <div class="container">
+          <div class="row" class="col-md-12 col-md-8">
+            <span class="text-muted">
+              <i>This bubble chart visualization shows the population density of each city (person per sq mile) for years
+                2010-2017 vs. the amount of emissions (in kg) per person per square mile of each city.
+              </i>
+              <br>
+              <br>
+              <i>To clear the graph and view a selected city, double check one city in the legend on the right side.
+              </i>
+            </span>
+            <hr>
             <br>
-            <i>To clear the graph and view a selected city, double check one city in the legend on the right side.
-            </i>
-          </span>
-          <hr>
-          <br>
-          <br>
-
-
+            <br>
+          </div>
+        </div>
+        <div class="container">
           <div class="row" class="col-md-12 col-md-8">
             <h4>Does the population density of a city have an  impact on it's transportation emissions?</h4>
-         <p>
-           <li>We were able to reject our null hypothesis, population density on a city has an impact 
-             on its transportation carbon emissions</li>
-           <li>Some cities have managed to reduce their transportation CO2 emissions and continue it's population growth </li>
-           <li>Due to more stringent state CO2 emissions and stronger urban growth boundaries, pushing for density</li>
-          </p>
-          <hr>
-          <br>
-          <br>
-          </div>
-
-          <div class="row" class="col-md-12 col-md-8">
-            <h4>Recommendations for the city of Springfield</h4>
-            <p>
               <ul>
-                <li>Strong urban growth boundaries</li>
-                <li>Urban design for higher density </li>
+                <li>Some cities have managed to reduce their transportation CO2 emissions and continue it's population growth.</li>
+                <li>Due to more stringent state CO2 emissions and stronger urban growth boundaries, pushing for density.</li>
               </ul>
-            </p>
+          </div>
+          <br>
+          <br>
+        </div>
+        <div class="container">
+          <div class="row" class="col-md-12 col-md-8">
+            <h2>Recommendations for Springfield</h2>
+          </div>
+          <div class="row" class="col-md-12 col-md-8">
+            <ul>
+              <li>Strong urban growth boundaries</li>
+              <li>Urban design for higher density</li>
+            </ul>
+          </div>
+          <br>
+          <br>
           <hr>
-          <br>
-          <br>
-          </div>
-          
-          </div>
-
-
-      <br>
-      <br>
-      <div class="container">
+        </div>
+        <br>
+        <br>
+        <div class="container">
         <div class="row">
           <div class="col-md-4">
             <h6 class="box-header">Data Sources</h6>
-            <ul>
-              <li>Population data from the US Census</li>
-              <li>Transportation emissions Distributed Archive Center for Biogeochemical Dynamics</li>
-              <li> US land size city areas from Wikipedia</li>
-            </ul>
+              <ul>
+                <li>Population data from the US Census</li>
+                <li>Transportation emissions Distributed Archive Center for Biogeochemical Dynamics</li>
+                <li> US land size city areas from Wikipedia</li>
+              </ul>
             <br>
           </div>
           <div class="col-md-8">
