@@ -1,87 +1,32 @@
 # bootcamp-group_project-3
 
-## Commuting vs. Transportation Emissions
+## Population vs. Transportation Emissions
 
 Group Team Members: Anna Rischitelli, Priya Arunachalam, Nataliia Sokolova, Vincent Durcan, and Shadia Duery
 
 ### Question:
-Does the population density of a city affect transportation emissions (in top 50 cities in the US by population)? 
+Does the population density of a city affect it's transportation CO2 emissions?
 
-Hypothesis: A city with high population density would have a decrease in transportation emissions. 
+### Hypothesis: 
+A city with high population density would have a decrease in transportation emissions. 
 
-Primary goals:
-- Overall emissions of a city
-- Population density of each city
-- 
-
-Add ons:
-- Commute numbers
-- City planning initiatives
-- Centralized public transportation
-- Forecast emissions based on population growth
-- Does a city's boundary grow and does that affect emissions
-
-## Visualization
-1. Heat map / bubble map - map our cities and create a bubble based on a normalized population with three map layers 
-    3a. Emissions 
-    3b. Population
-    3c. Emissions by pop.density
-
-2. Scatter plot - pop.density vs. emissions with regression line (Priya)
-
-3. Line chart - emissions vs. population over time (Shadia)
-
-## Data Sources
-- Population (Vincent's data)
-- Transportation emissions (Nataliia's data)
-- Land size to create population density
+## Data Sources:
+- Population data from the US Census
+- Transportation emissions Distributed Archive Center for Biogeochemical Dynamics
+- US land size city areas from Wikipedia
 
 ### Project Description:
 
-1) Your task is to answer a business question by telling a story with data visualizations
+The city of Springfield is a fast-growing middle-sized city in the US. Currently is at a turning point; this year has reached a population size of 300k and is experiencing a high rate of migration. The Urban Planning and Sustainable Development Office (UPSDO) is in charge of crafting a 10-year plan to guide the city's growth path between increased density or urban sprawl. Springfield is a city that cares about air pollution and its contribution to global carbon emissions and bases its decisions informed by data analysis. The city has requested its data analytics team to determine if increasing population density increases or reduces transportation carbon emissions.
 
-2) Focus on providing users an interactive means to explore data themselves
+## How to run the database
+We used a SQLite database that was cleaned, built, and designed in Jupyter notebook.
 
-3) Prepare a 10-minute presentation that communicates the executive summary of your findings
+## How to run the included code to insert data into the database
+The data was transferred from CSV to SQL (sqlite) database, then a json object was created in Flask application.
 
-4) You may choose a project of any theme, but we encourage you to think broadly
+## How to run the code to view the visualizations
+From VSCode, when the project folder is open, navigate in the terminal window to the project folder. For example, a code line would read "cd desktop/bootcamp-group_project-3". Once inside the folder, the command "python app.py" will create a server and allow you to follow the link to the active webpage.
 
-5) You will have an ample time in class to work with your group, but expect to put in hours outside of class as well
+The visualization on the main html are interactive on load. There is another link to a page "Data" in the top nav bar that will take a viewer to our database json output, if interested.
 
-### Requirements:
-
-1) Your visualizations must include a Python Flask-powered API, HTML/CSS, JavaScript and at least on database (SQL, MongoDB, SQLite)
-
-2) Your project should fall into one of the below four tracks:
-- A custome "creative" D3.js project (an interactive visualization)
-- A combination of web scraping and Leaflet or Plotly
-- A dashboard page with multiple charts that update from the same data
-- A "thick" server that performs multiple manipulations on data in a database prior to visualization 
-
-3) Your project should include at least on JS library that we did not cover
-
-4) Your project must be powered by a data set with at least 100 records
-
-5) Your project must include some level of user-driven interactions (e.g. menus, dropdowns, textboxes)
-
-6) Your final visualization should include at least three views.
-
-
-
-## Final Readme should include:
- This is the README that describes how to run
-
-This is the database that is used
-
-This is how to run the included code to insert data into the DB
-
-This is how to run the code to spin up the web app and view the visualizations
-
-
-# Steps
-- Vincent + Nataliia import data from CSV
-- Vincent + Nataliia clean and organize data in jupyter notebook/pandas, merge into single clean dataframe
-- Create all three visualizations (and more!) in pandas to make sure they fit what we need BEFORE we go through to d3
-- Create empty database SQlite in pandas
-- Pass this data into SQLite database, follow the same steps as pizza example to create table and pass data through flask app
-- Open app.py
